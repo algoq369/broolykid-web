@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { NavSigles } from "@/components/NavSigles";
 import { Reader } from "@/components/Reader";
 import { Milestones } from "@/components/Milestones";
+import { Chat } from "@/components/Chat";
 import { Footer } from "@/components/Footer";
 import type { PhaseId } from "@/lib/content";
 
@@ -39,9 +40,7 @@ export default function Home() {
 
       <main className="flex flex-1">
         {chatOpen ? (
-          <div className="flex flex-1 items-center justify-center text-text-muted text-[13px]">
-            chat IA — bientôt disponible
-          </div>
+          <Chat />
         ) : (
           <Reader
             activePhase={activePhase}
