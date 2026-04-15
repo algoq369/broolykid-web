@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { BOOK_PHASES, PHASE_ORDER } from "@/lib/content";
 import { env } from "@/env";
+import { logger } from "@/lib/logger";
 
 // --- Rate limiting (in-memory, per IP, 10 req/min) ---
 
@@ -121,7 +122,7 @@ export async function POST(request: NextRequest) {
 
     if (!response.ok) {
       const errorText = await response.text().catch(() => "Unknown error");
-      console.error(`Groq API error ${response.status}: ${errorText}`);
+      logger.error("Groq API error", { status: response.status, body: errorText });
       return NextResponse.json(
         { error: "Erreur du service IA." },
         { status: 502 },
@@ -139,7 +140,7 @@ export async function POST(request: NextRequest) {
         { status: 504 },
       );
     }
-    console.error("Chat API error:", err);
+    logger.error("Chat API error", { error: String(err) });
     return NextResponse.json(
       { error: "Erreur interne du serveur." },
       { status: 500 },
