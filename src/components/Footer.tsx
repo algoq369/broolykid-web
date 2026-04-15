@@ -8,6 +8,13 @@ export function Footer() {
       </p>
       <div className="mt-2 flex items-center justify-center gap-4 text-[11px]">
         <Link
+          href="/book"
+          className="text-text-muted hover:text-accent"
+        >
+          ◇ Lire le livre (PDF)
+        </Link>
+        <span className="text-border">|</span>
+        <Link
           href="/legal"
           className="text-text-muted hover:text-accent"
         >
