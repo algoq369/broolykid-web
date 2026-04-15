@@ -5,7 +5,6 @@ import {
   getPhase,
   getPhaseIndex,
   getAdjacentPhases,
-  type PhaseId,
 } from "./content";
 
 describe("content", () => {

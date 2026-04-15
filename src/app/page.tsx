@@ -1,13 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/Header";
 import { NavSigles } from "@/components/NavSigles";
 import { Reader } from "@/components/Reader";
 import { Milestones } from "@/components/Milestones";
-import { Chat } from "@/components/Chat";
 import { Footer } from "@/components/Footer";
+import { LoadingSpinner } from "@/components/LoadingSpinner";
 import type { PhaseId } from "@/lib/content";
+
+const Chat = dynamic(() => import("@/components/Chat").then((m) => m.Chat), {
+  loading: () => (
+    <div className="flex flex-1 items-center justify-center">
+      <LoadingSpinner text="chargement du chat..." />
+    </div>
+  ),
+});
 
 export default function Home() {
   const [activePhase, setActivePhase] = useState<PhaseId>("intro");
