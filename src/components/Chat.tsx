@@ -50,7 +50,7 @@ export function Chat() {
   }
 
   return (
-    <div className="flex flex-1 flex-col max-w-[900px] w-full mx-auto px-4 sm:px-8 py-6">
+    <div className="flex flex-1 flex-col w-full px-3 py-4">
       {/* Chat header */}
       <div className="mb-4 border-b border-border pb-3">
         <h2 className="text-[16px] font-semibold text-text-bright">
