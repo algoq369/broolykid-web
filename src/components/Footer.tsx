@@ -8,17 +8,10 @@ export function Footer() {
       </p>
       <div className="mt-2 flex items-center justify-center gap-4 text-[11px]">
         <Link
-          href="/mentions"
+          href="/legal"
           className="text-text-muted hover:text-accent"
         >
-          Mentions légales
-        </Link>
-        <span className="text-border">|</span>
-        <Link
-          href="/privacy"
-          className="text-text-muted hover:text-accent"
-        >
-          Confidentialité
+          Mentions légales & Confidentialité
         </Link>
       </div>
     </footer>

@@ -4,15 +4,15 @@
 
 :root {
   /* Backgrounds */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #111111;
-  --bg-tertiary: #161616;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --bg-tertiary: #f0f0f0;
 
   /* Text */
-  --text-primary: #e0e0e0;
-  --text-secondary: #888888;
-  --text-muted: #666666;
-  --text-bright: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --text-bright: #000000;
 
   /* Accent */
   --accent: #c9a227;
@@ -20,8 +20,8 @@
   --accent-glow: rgba(201, 162, 39, 0.1);
 
   /* Borders */
-  --border: #222222;
-  --border-hover: #333333;
+  --border: #e0e0e0;
+  --border-hover: #cccccc;
 
   /* States */
   --success: #2d5a2d;
